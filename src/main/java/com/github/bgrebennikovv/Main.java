@@ -7,7 +7,6 @@ public class Main {
         int[] numbersArray = new int[]{1, 2, 3};
         System.out.println(numbersArray);
 
-        // Task 2
         double[] doubleArray = new double[3];
         doubleArray[0] = 1.57;
         doubleArray[1] = 7.654;
