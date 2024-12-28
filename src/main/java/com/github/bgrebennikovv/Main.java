@@ -72,6 +72,15 @@ public class Main {
         System.out.println(displayArray(reverseArray(doubleArray)));
         System.out.println(displayArray(reverseArray(byteArray)));
 
+        // Task 4
+        System.out.println("\nTask 4");
+
+        for (int i = 0; i < numbersArray.length; i++) {
+            numbersArray[i] = (numbersArray[i] % 2 != 0) ? numbersArray[i] + 1 : numbersArray[i];
+        }
+        System.out.println(Arrays.toString(numbersArray));
+
+
     }
 
     public static int[] reverseArray(int[] array) {
