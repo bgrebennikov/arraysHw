@@ -27,12 +27,12 @@ public class Main {
         System.out.println(Arrays.toString(byteArray));
 
         // Task 2
-        System.out.println("\nTask");
+        System.out.println("\nTask 2");
 
         StringBuilder numbersArrayString = new StringBuilder();
         for (int i = 0; i < numbersArray.length; i++) {
             String separator = ", ";
-            if (i == numbersArray.length-1) {
+            if (i == numbersArray.length - 1) {
                 separator = "";
             }
             numbersArrayString.append(String.format("%d%s", numbersArray[i], separator));
@@ -43,7 +43,7 @@ public class Main {
         StringBuilder doubleArrayString = new StringBuilder();
         for (int i = 0; i < doubleArray.length; i++) {
             String separator = ", ";
-            if (i == doubleArray.length-1) {
+            if (i == doubleArray.length - 1) {
                 separator = "";
             }
             doubleArrayString.append(String.format("%s%s", doubleArray[i], separator));
@@ -54,13 +54,17 @@ public class Main {
         StringBuilder byteArrayString = new StringBuilder();
         for (int i = 0; i < byteArray.length; i++) {
             String separator = ", ";
-            if (i == byteArray.length-1) {
+            if (i == byteArray.length - 1) {
                 separator = "";
             }
             byteArrayString.append(String.format("%s%s", byteArray[i], separator));
         }
 
         System.out.println(byteArrayString);
+
+        // Task 3
+        System.out.println("\nTask 3");
+        
 
 
     }
