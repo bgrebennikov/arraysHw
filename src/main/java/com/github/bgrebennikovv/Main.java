@@ -31,5 +31,18 @@ public class Main {
                 Минимальная сумма трат за неделю составила %s рублей. Максимальная сумма трат за неделю составила %s рублей
                 """, minExpenses, maxExpenses);
 
+        // Task 3
+        System.out.println("\nTask 3");
+        int[] expenses = {200, 11_000, 2_500, 400, 650};
+
+        int total = 0;
+        for (int ex : expenses) {
+            total += ex;
+        }
+
+        double average = (double) total / expenses.length;
+
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей.\n", average);
+
     }
 }
