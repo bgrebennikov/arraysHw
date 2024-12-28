@@ -2,8 +2,11 @@ package com.github.bgrebennikovv;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
+
 
 public class Main {
+
 
     public static void main(String[] args) {
 
@@ -64,8 +67,58 @@ public class Main {
 
         // Task 3
         System.out.println("\nTask 3");
-        
 
+        System.out.println(displayArray(reverseArray(numbersArray)));
+        System.out.println(displayArray(reverseArray(doubleArray)));
+        System.out.println(displayArray(reverseArray(byteArray)));
 
     }
+
+    public static int[] reverseArray(int[] array) {
+        return IntStream.range(0, array.length)
+                .map(index -> array[array.length - 1 - index])
+                .toArray();
+    }
+
+    public static String displayArray(int[] array) {
+        StringBuilder arrayString = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            String separator = (i == array.length - 1) ? "" : ", ";
+            arrayString.append(array[i]).append(separator);
+        }
+        return arrayString.toString();
+    }
+
+    public static double[] reverseArray(double[] array) {
+        return IntStream.range(0, array.length)
+                .mapToDouble(index -> array[array.length - 1 - index])
+                .toArray();
+    }
+
+    public static String displayArray(double[] array) {
+        StringBuilder arrayString = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            String separator = (i == array.length - 1) ? "" : ", ";
+            arrayString.append(array[i]).append(separator);
+        }
+        return arrayString.toString();
+    }
+
+    public static byte[] reverseArray(byte[] array) {
+        byte[] reversedArray = new byte[array.length];
+        for (int i = 0; i < array.length; i++) {
+            reversedArray[i] = array[array.length - 1 - i];
+        }
+        return reversedArray;
+    }
+
+    public static String displayArray(byte[] array) {
+        StringBuilder arrayString = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            String separator = (i == array.length - 1) ? "" : ", ";
+            arrayString.append(array[i]).append(separator);
+        }
+        return arrayString.toString();
+    }
+
 }
