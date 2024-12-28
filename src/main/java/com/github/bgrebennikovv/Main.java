@@ -1,5 +1,7 @@
 package com.github.bgrebennikovv;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -43,6 +45,25 @@ public class Main {
         double average = (double) total / expenses.length;
 
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей.\n", average);
+
+        // Task 4
+        System.out.println("\nTask 4");
+
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        int left = 0;
+        int right = reverseFullName.length - 1;
+
+        while (left < right) {
+            char tmp = reverseFullName[left];
+            reverseFullName[left] = reverseFullName[right];
+            reverseFullName[right] = tmp;
+
+            left++;
+            right--;
+        }
+
+        System.out.println(new String(reverseFullName));
 
     }
 }
